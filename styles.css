@@ -1,3 +1,12 @@
+@font-face {
+    font-family:'Outfit';
+    src:url('/assets/fonts/outfit/Outfit-VariableFont_wght.ttf');
+    
+}
+@font-face {
+    font-family:'Young Serif';
+    src:url('/assets/fonts/young-serif/YoungSerif-Regular.ttf')
+}
 :root {
 
     --white: hsl(0, 0%, 100%);
@@ -11,18 +20,47 @@
     --rose-800: hsl(332, 51%, 32%);
     --rose-50: hsl(330, 100%, 98%);
     
+    --border-radius:1rem;
 }
+@layer reset {
+    body {
+        margin:0;
+        font-family:'Outfit';
+    }
+}
+
 body {
-    background: var(--brown-800);
+    background: var(--stone-100);
+    color:var(--stone-600);
+}
+h1,h2 {
+    font-family:'Young Serif';
+}
+h1 {
+    color:var(--stone-900);
+}
+h2 {
+    color:var(--brown-800);
 }
 main {
-    margin: 0 auto;
+    margin: 1rem 0;
+    margin-inline: auto;
+    padding:1.4em 1em;
     background-color:var(--white);
     width:100%;
     max-width: 1024px;
+    border-radius:var(--border-radius);
 }
 
-picture {
+picture,
+picture img,
+picture source {
     width:100%;
     object-fit:cover;
+    border-radius: var(--border-radius);
+
+}
+
+table thead {
+    display:none;
 }
