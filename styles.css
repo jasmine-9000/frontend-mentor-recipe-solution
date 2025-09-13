@@ -24,6 +24,7 @@
     --rose-50: hsl(330, 100%, 98%);
     
     --border-radius:1rem;
+    --divider-color:#c6c6c6;
 }
 @layer reset {
     body {
@@ -47,6 +48,7 @@ h1 {
 }
 h2 {
     color:var(--brown-800);
+    font-weight:400;
 }
 p {
     line-height:1.5;
@@ -110,6 +112,12 @@ ol li {
     line-height:1.5;
     padding-bottom:0.5rem;
 }
+hr {
+    border:none;
+    color:var(--divider-color);
+    background-color: var(--divider-color);
+    height:1px;
+}
 table tr,
 table tr td {
     border-bottom: 1px solid var(--stone-900-opacity);
@@ -131,14 +139,19 @@ table tr td:nth-child(2){
     main {
         margin-top: 0px;
         border-radius: 0;
+        padding:0;
+    }
+    article {
+        padding:0.5em 2em;
     }
     h1 {
+        font-size:24pt;
     }
     picture,
     picture img,
     picture source {
         width:100%;
-        object-fit:cover;
+        object-fit:fill;
         border-radius: 0;
     }
 }
