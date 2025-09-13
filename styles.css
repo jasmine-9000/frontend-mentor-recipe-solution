@@ -41,9 +41,15 @@ h1,h2 {
 }
 h1 {
     color:var(--stone-900);
+    
+    font-size:28pt;
+    font-weight:400;
 }
 h2 {
     color:var(--brown-800);
+}
+p {
+    line-height:1.5;
 }
 main {
     
@@ -119,4 +125,20 @@ table tr td:last-child {
 table tr td:nth-child(2){
     color:var(--brown-800);
     font-weight:700;
+}
+
+@media screen and (max-width:600px) {
+    main {
+        margin-top: 0px;
+        border-radius: 0;
+    }
+    h1 {
+    }
+    picture,
+    picture img,
+    picture source {
+        width:100%;
+        object-fit:cover;
+        border-radius: 0;
+    }
 }
